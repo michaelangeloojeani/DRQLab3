@@ -1,9 +1,9 @@
-const create = () => {
+const Create = () => {
     return <div>
     <h3>Hello form create component</h3>
-    <Movies myMovies={data}/>
+    
 
     </div>
   };
   
-  export default create;
+  export default Create;

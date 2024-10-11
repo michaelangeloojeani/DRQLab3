@@ -4,8 +4,8 @@ import NavigationBar from './components/navbar';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Content from './components/content';
-import read from './components/read';
-import create from './components/create';
+import Read from './components/read';
+import Create from './components/create';
 function App() {
   return (
     // Wrap the application with the Router to handle navigation
@@ -19,10 +19,10 @@ function App() {
         <Route path="/" element={<Content />} />
 
         {/* Route for the '/read' path, renders the Footer component */}
-        <Route path="/read" element={<read />} />
+        <Route path="/read" element={<Read />} />
 
         {/* Route for the '/create' path, also renders the Footer component */}
-        <Route path="/create" element={<create />} />
+        <Route path="/create" element={<Create />} />
       </Routes>
     </Router>
   );

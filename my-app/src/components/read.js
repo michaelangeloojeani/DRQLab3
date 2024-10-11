@@ -1,5 +1,5 @@
 import Movies from "./movies";
-const read = () => {
+const Read = () => {
     const data =[
         {
             "Title": "Avengers: Infinity War",
@@ -34,4 +34,4 @@ const read = () => {
     ); 
   };
   
-  export default read;
+  export default Read;
