@@ -19,10 +19,10 @@ function App() {
         <Route path="/" element={<Content />} />
 
         {/* Route for the '/read' path, renders the Footer component */}
-        <Route path="/read" element={<Footer />} />
+        <Route path="/read" element={<read />} />
 
         {/* Route for the '/create' path, also renders the Footer component */}
-        <Route path="/create" element={<Header />} />
+        <Route path="/create" element={<create />} />
       </Routes>
     </Router>
   );
