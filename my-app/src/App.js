@@ -4,8 +4,8 @@ import NavigationBar from './components/navbar';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Content from './components/content';
-
-
+import read from './components/read';
+import create from './components/create';
 function App() {
   return (
     // Wrap the application with the Router to handle navigation

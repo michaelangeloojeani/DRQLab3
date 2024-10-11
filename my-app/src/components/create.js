@@ -1,5 +1,9 @@
 const create = () => {
-    return <h1>My Header in another component</h1>;
+    return <div>
+    <h3>Hello form create component</h3>
+    <Movies myMovies={data}/>
+
+    </div>
   };
   
   export default create;
