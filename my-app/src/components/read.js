@@ -1,44 +1,28 @@
-// Import the Movies component from the "movies" file
+//Read.js
+
 import Movies from "./movies";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
-// Define a functional component named Read
-const Read = () => {
-    // Define a constant array 'data' containing movie objects with properties such as Title, Year, imdbID, Type, and Poster
-    const data = [
-        {
-            "Title": "Avengers: Infinity War",
-            "Year": "2018",
-            "imdbID": "tt4154756",
-            "Type": "movie",
-            "Poster": "https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg"
-        },
-        {
-            "Title": "Captain America: Civil War",
-            "Year": "2016",
-            "imdbID": "tt3498820",
-            "Type": "movie",
-            "Poster": "https://m.media-amazon.com/images/M/MV5BMjQ0MTgyNjAxMV5BMl5BanBnXkFtZTgwNjUzMDkyODE@._V1_SX300.jpg"
-        },
-        {
-            "Title": "World War Z",
-            "Year": "2013",
-            "imdbID": "tt0816711",
-            "Type": "movie",
-            "Poster": "https://m.media-amazon.com/images/M/MV5BNDQ4YzFmNzktMmM5ZC00MDZjLTk1OTktNDE2ODE4YjM2MjJjXkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg"
-        }
-    ];
+function Read() {
+  const [movies, setMovies] = useState([]);
 
-    // Return the JSX that represents the UI for the Read component
-    return (
-        <div>
-            {/* Display a heading for the Read component */}
-            <h3>Hello from Read component</h3>
-            
-            {/* Render the Movies component and pass the 'data' array as a prop named 'myMovies' */}
-            <Movies myMovies={data} />
-        </div>
-    ); 
-};
+  useEffect(() => {
+    axios.get('<my_api_url>')
+      .then((response) => {
+        setMovies(response.data.movies);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
 
-// Export the Read component as the default export
+  return (
+    <div>
+      <h2>This is my Read Component.</h2>
+      <Movies myMovies={movies} />
+    </div>
+  );
+}
+
 export default Read;
