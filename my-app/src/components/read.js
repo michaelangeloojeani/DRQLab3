@@ -1,4 +1,4 @@
-//Read.js
+
 
 import Movies from "./movies";
 import { useEffect, useState } from "react";
